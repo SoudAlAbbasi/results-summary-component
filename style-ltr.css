@@ -1,20 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 :root {
-    #Colors
-    ## Primary
 --Light-red: hsl(0, 100%, 67%);
+--Light-red-op: hsla(0, 100%, 67%, 0.1);
 --Orangey-yellow: hsl(39, 100%, 56%);
+--Orangey-yellow-op: hsla(39, 100%, 56%, 0.1);
 --Green-teal: hsl(166, 100%, 37%);
+--Green-teal-op: hsla(166, 100%, 37%, 0.1);
 --Cobalt-blue: hsl(234, 85%, 45%);
-## Neutral
+--Cobalt-blue-op: hsla(234, 85%, 45%, 0.1);
 --White: hsl(0, 0%, 100%);
 --Pale-blue: hsl(221, 100%, 96%);
 --Light-lavender: hsl(241, 100%, 89%);
 --Dark-gray-blue: hsl(224, 30%, 27%);
-/*# Gradients need to be worked on
---Light-slate-blue(background): hsl(252, 100%, 67%);
---Light-royal-blue(background): hsl(241, 81%, 54%);
---Violet-blue(circle): hsla(256, 72%, 46%, 1);
---Persian-blue(circle): hsla(241, 72%, 46%, 0);*/
+/* Gradient colors */
+--Light-slate-blue: hsl(252, 100%, 67%);
+--Light-royal-blue: hsl(241, 81%, 54%);
+--Violet-blue: hsla(256, 72%, 46%, 1);
+--Persian-blue: hsla(241, 72%, 46%, 0);
 direction: ltr;
 }
 
+* {
+  font-family: Poppins, sans-serif;
+  color: var(--Dark-gray-blue);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+body {
+  background-size: cover;
+  width: 100%;
+}
+h1 {
+  font-weight: 700;
+  font-size: 3em;
+  margin-bottom: 20px;
+  line-height: 1.125;
+}
+
+p.ts {
+  color: var(--Grayish-Blue);
+  text-align: center;
+  font-size: 12px;
+  margin: 20px auto;
+}
+
+a {
+  color: var(--Red);
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form input conditions*/
+
+.field input {
+  width: 100%;
+  color: #000000;
+  font-weight: 600;
+  padding: 16px 20px;
+  border: 1px solid var(--Cobalt-blue);
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  transition: border-color 333ms ease;
+}
+
+div.reaction {
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 16px;
+  background-color: var(--Light-red-op);
+  color: var(--Light-red);
+  font-weight: 600;
+}
+div.memory {
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 16px;
+  background-color: var(--Orangey-yellow-op);
+    color: var(--Orangey-yellow);
+  font-weight: 600;
+}
+
+.reaction label {
+  color: var(--Light-red);
+  font-weight: 600;
+  }
+.memory label {
+  color: var(--Orangey-yellow);
+  font-weight: 600;
+  line-height: 1;
+  }
+
+div.verbal {
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 16px;
+  background-color: var(--Green-teal-op);
+  color: var(--Green-teal);
+  font-weight: 600;
+}
+div.visual {
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 16px;
+  background-color: var(--Cobalt-blue-op);
+
+
+}
+  .visual label {
+  color: var(--Cobalt-blue);
+  font-weight: 600;
+  }
+.verbal label {
+  color: var(--Green-teal);
+  font-weight: 600;
+  }
+
+.field input::placeholder {
+  font-weight: 600;
+  color: var(--Light-slate-blue);
+}
+
+.field input[type="text"]:focus,
+.field input[type="email"]:focus,
+.field input[type="password"]:focus {
+  border: 1px solid var(--Dark-Blue);
+  outline: none;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  color: #ffffff;
+  font-weight: 600;
+  background-color: var(--Dark-gray-blue);
+  padding: 16px 20px;
+  margin-top: 20px;
+  border-radius: 56px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border: 0px solid var(--Green-Shadow);
+  cursor: pointer;
+  transition: background-color 333ms ease;
+}
+form input[type="submit"]:hover {
+  background-color: var(--Light-royal-blue);
+}
+
+.field.success input {
+  border-color: var(--Blue);
+}
+
+.field.error input {
+  border: 1px solid var(--Red);
+  background: url(./images/icon-error.svg) no-repeat 95%;
+}
+
+.field .invalid {
+  color: var(--Red);
+  text-align: right;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+/*signup formatting of left and right*/
+
+main#container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0px auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.result {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 0px 25px 0px;
+}
+.result.left {
+  width: 50%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.result.right {
+  width: 50%;
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.try {
+  background-color: var(--Blue);
+  width: 100%;
+  padding: 16px 40px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 10px 0px hsl(0, 0%, 0%, 0.33);
+}
+div.inputs-wrap {
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border: none;
+  box-shadow: 0px 10px 0px hsl(0, 0%, 0%, 0.33);
+}
+
+/* Responsive layout - when the screen is less than 767px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media only screen and (max-width: 767px) {
+  /* For horizontal mobile phones: */
+  [class*="result-"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+  }
+  .result {
+    flex-direction: column;
+  }
+  .result.left {
+    text-align: center;
+    margin: 50px 0px 25px 0px;
+  }
+  .result.right {
+    margin: 25px 0px 50px 0px;
+  }
+  div.inputs-wrap {
+    padding: 24px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  /* For mobile phones: */
+  [class*="result"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+  }
+  .result {
+    flex-direction: column;
+  }
+  .result.left {
+    text-align: center;
+    margin: 50px 0px 25px 0px;
+  }
+  .result.right {
+    margin: 25px 0px 50px 0px;
+  }
+  div.inputs-wrap {
+    padding: 24px;
+  }
+}

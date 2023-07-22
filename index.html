@@ -4,42 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <link rel="stylesheet" href="style-ltr.css">
+    <link rel="stylesheet" href="./style-ltr.css">
     <title>Frontend Mentor | Results summary component</title>
   </head>
   <body>
-    <main id="signup-container">
-      <div class="signup">
-        <div class="signup-left">
+    <main id="container">
+      <div class="result">
+        <div class="result left">
           <h2>Your Result</h2>
           <p id="score"> 76 </p>
           <p id="max"> of 100 </p>
           <h3 id="result"> Great </h3>
           <p class="result"> You scored higher than 65% of the people who have taken these tests. </p>
         </div>
-        <div class="signup-right">
-          <div class="form-wrap">
+        <div class="result right">
+          <div class="inputs-wrap">
             <h3> Summary </h3>
             <form action="/" id="form">
-              <div>
+              <div class="reaction field">
+                <img class="icon" src="./assets/images/icon-reaction.svg"/>
                 <Label class="label" for="reaction">Reaction</Label>
-                <input id="reaction" type="number" value="80" max="100" />
-                <p>/ 100</p>
+                <input id="reaction" type="number" value="80" max="100" min="0" />
+                <span>/ 100</span>
               </div>
-              <div>
+              <div class="memory field">
+                <img class="icon" src="./assets/images/icon-memory.svg"/>
                 <Label class="label" for="memory">Memory</Label>
-                <input id="memory" type="number" value="92" max="100" />
-                <p>/ 100</p>
+                <input id="memory" type="number" value="92" max="100" min="0" />
+                <span>/ 100</span>
               </div>
-              <div>
+              <div class="verbal field">
+                <img class="icon" src="./assets/images/icon-verbal.svg"/>
                 <Label class="label" for="verbal">Verbal</Label>
-                <input id="verbal" type="number" value="61" max="100" />
-                <p>/ 100</p>
+                <input id="verbal" type="number" value="61" max="100" min="0" />
+                <span>/ 100</span>
               </div>
-              <div>
+              <div class="visual field">
+                <img class="icon" src="./assets/images/icon-visual.svg"/>
                 <Label class="label" for="visual">Visual</Label>
-                <input id="visual" type="number" value="72" max="100" />
-                <p>/ 100</p>
+                <input id="visual" type="number" value="72" max="100" min="0" />
+                <span>/ 100</span>
               </div>
               <div>
                 <input type="submit" value="Continue" />
