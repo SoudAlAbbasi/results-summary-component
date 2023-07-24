@@ -3,53 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <link rel="stylesheet" href="./style-ltr.css">
-    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="style-ltr.css">
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Results summary component by Soud</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <main id="container">
-      <div class="result">
-        <div class="result left">
-          <h2>Your Result</h2>
-          <p id="score"> 76 </p>
-          <p id="max"> of 100 </p>
-          <h3 id="result"> Great </h3>
-          <p class="result"> You scored higher than 65% of the people who have taken these tests. </p>
+    <main class="container">
+      <div class="box">
+        <div class="left-toUp">
+          <h1> Your Result</h1>
+          <div class="score"> 76 of 100 </div>
+          <h1>Great</h1>
+          <p>You scored higher than 65% of the people who have taken these tests.</p>
         </div>
-        <div class="result right">
-          <div class="inputs-wrap">
-            <h3> Summary </h3>
-            <form action="/" id="form">
-              <div class="reaction field">
-                <img class="icon" src="./assets/images/icon-reaction.svg"/>
-                <Label class="label" for="reaction">Reaction</Label>
-                <input id="reaction" type="number" value="80" max="100" min="0" />
-                <span>/ 100</span>
-              </div>
-              <div class="memory field">
-                <img class="icon" src="./assets/images/icon-memory.svg"/>
-                <Label class="label" for="memory">Memory</Label>
-                <input id="memory" type="number" value="92" max="100" min="0" />
-                <span>/ 100</span>
-              </div>
-              <div class="verbal field">
-                <img class="icon" src="./assets/images/icon-verbal.svg"/>
-                <Label class="label" for="verbal">Verbal</Label>
-                <input id="verbal" type="number" value="61" max="100" min="0" />
-                <span>/ 100</span>
-              </div>
-              <div class="visual field">
-                <img class="icon" src="./assets/images/icon-visual.svg"/>
-                <Label class="label" for="visual">Visual</Label>
-                <input id="visual" type="number" value="72" max="100" min="0" />
-                <span>/ 100</span>
-              </div>
-              <div>
-                <input type="submit" value="Continue" />
-              </div>
-            </form>
-          </div>
+        <div class="right-toDn">
+          <h1>Summary</h1>
+          <form id="form">
+            <div class="reaction">
+              <img src="./assets/images/icon-reaction.svg" />Reaction <input type="number" value="80" min="0" max="100" maxlength="3" class="hundred">80 <span class="Outof100">/ 100</span>
+            </div>
+            <div class="memory">
+              <img src="./assets/images/icon-memory.svg" />Memory <input type="number" value="92" min="0" max="100" maxlength="3" class="hundred">92 <span class="Outof100">/ 100</span>
+            </div>
+            <div class="verbal">
+              <img src="./assets/images/icon-verbal.svg" />Verbal <input type="number" value="61" min="0" max="100" maxlength="3" class="hundred">61 <span class="Outof100">/ 100</span>
+            </div>
+            <div class="visual">
+              <img src="./assets/images/icon-visual.svg" />Visual <input type="number" value="72" min="0" max="100" maxlength="3" class="hundred">72 <span class="Outof100">/ 100</span>
+            </div>
+            <button> Continue </button>
+          </form>
         </div>
       </div>
     </main>

@@ -1,170 +1,239 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 :root {
---Light-red: hsl(0, 100%, 67%);
---Light-red-op: hsla(0, 100%, 67%, 0.1);
---Orangey-yellow: hsl(39, 100%, 56%);
---Orangey-yellow-op: hsla(39, 100%, 56%, 0.1);
---Green-teal: hsl(166, 100%, 37%);
---Green-teal-op: hsla(166, 100%, 37%, 0.1);
---Cobalt-blue: hsl(234, 85%, 45%);
---Cobalt-blue-op: hsla(234, 85%, 45%, 0.1);
---White: hsl(0, 0%, 100%);
---Pale-blue: hsl(221, 100%, 96%);
---Light-lavender: hsl(241, 100%, 89%);
---Dark-gray-blue: hsl(224, 30%, 27%);
-/* Gradient colors */
---Light-slate-blue: hsl(252, 100%, 67%);
---Light-royal-blue: hsl(241, 81%, 54%);
---Violet-blue: hsla(256, 72%, 46%, 1);
---Persian-blue: hsla(241, 72%, 46%, 0);
-direction: ltr;
-}
+  --Reaction-red: hsla(0, 100%, 67%,1);
+  --Memory-yellow: hsla(39, 100%, 56%,1);
+  --Verbal-green: hsla(166, 100%, 37%,1);
+  --Visual-blue: hsla(234, 85%, 45%,1);
+  --Reaction-red-bg: hsla(0, 100%, 67%,0.1);
+  --Memory-yellow-bg: hsla(39, 100%, 56%,0.1);
+  --Verbal-green-bg: hsla(166, 100%, 37%,0.1);
+  --Visual-blue-bg: hsla(234, 85%, 45%,0.1);
 
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+  --Outof100: hsla(224, 30%, 27%, 0.67);
+
+  --grad-Light-Slate-blue: hsl(252, 100%, 67%);
+  --grad-Light-Royal-blue: hsl(241, 81%, 54%);
+  --grad-Violet-blue: hsla(256, 72%, 46%, 1);
+  --grad-Persian-blue: hsla(241, 72%, 46%, 0);
+}
 * {
-  font-family: Poppins, sans-serif;
-  color: var(--Dark-gray-blue);
-  font-size: 16px;
-  font-weight: 400;
-  padding: 0px;
-  margin: 0px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   box-sizing: border-box;
-  line-height: 1.5;
+  line-height: 1;
 }
 body {
-  background-size: cover;
+  background-color: var(--White);
   width: 100%;
+  direction: ltr;
+  padding: 0px;
+  margin: 0px;
 }
 h1 {
   font-weight: 700;
   font-size: 3em;
   margin-bottom: 20px;
   line-height: 1.125;
+  color: var(--Pale-blue);
 }
 
-p.ts {
-  color: var(--Grayish-Blue);
+
+main.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0px auto;
+  align-items: center;
+  justify-content: center;
+}
+.Outof100 {
+  color: var(--Outof100);
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  max-height: 90vh;
+}
+.left-toUp {
+  width: 50%;
+  margin: 0px;
+  padding: 25px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  font-size: 12px;
-  margin: 20px auto;
+  background-image: linear-gradient(to bottom, var(--grad-Light-Royal-blue), var(--grad-Light-Slate-blue));
+  color: var(--Light-lavender);
+  border-radius: 50px;
+}
+.right-toDn {
+  width: 50%;
+  margin: 0px;
+  padding: 25px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--White);
+  color: var(--Dark-gray-blue);
+  max-height: fit-content;
 }
 
-a {
-  color: var(--Red);
-  text-decoration: none;
-  font-size: inherit;
-  font-weight: 600;
+.score {
+  background-image: linear-gradient(to bottom, var(--grad-Persian-blue), var(--grad-Violet-blue));
+  color: var(--Pale-blue);
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: none;
+  margin: 15px auto;
+  padding: 15px;
 }
-a:hover {
-  text-decoration: underline;
+div.score p  {
+}
+.reaction {
+background-color: var(--Reaction-red-bg);
+padding: 15px 25px;
+margin: 15px 25px;
+color: var(--Reaction-red);
+border-radius: 20px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+.memory {
+  background-color: var(--Memory-yellow-bg);
+  padding: 15px 25px;
+  margin: 15px 25px;
+  color: var(--Memory-yellow);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+.verbal {
+  background-color: var(--Verbal-green-bg);
+  padding: 15px 25px;
+  margin: 15px 25px;
+  color: var(--Verbal-green);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.visual {
+  background-color: var(--Visual-blue-bg);
+  padding: 15px 25px;
+  margin: 15px 25px;
+  color: var(--Visual-blue);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-/* Form input conditions*/
+input[type="number"] {
+  border: none;
+  background: none;
+  color: var(--Dark-gray-blue);
+  font-weight: 700;
+}
 
-.field input {
+button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  align-content: center;
+      background: linear-gradient(to bottom, var(--Dark-gray-blue), var(--Dark-gray-blue));
+
+  color: var(--White);
+  transition: background 333ms ease;
+
+}
+button:hover {
+    background: linear-gradient(to bottom, var(--grad-Light-Slate-blue), var(--grad-Light-Royal-blue));
+
+}
+
+/*
+.form-input input {
   width: 100%;
   color: #000000;
   font-weight: 600;
+  background-color: #ffffff;
   padding: 16px 20px;
-  border: 1px solid var(--Cobalt-blue);
+  border: 1px solid var(--Grayish-Blue);
   border-radius: 6px;
   box-sizing: border-box;
   margin-top: 20px;
   transition: border-color 333ms ease;
 }
-
-div.reaction {
-  padding: 10px 20px;
-  margin: 20px auto;
-  border-radius: 16px;
-  background-color: var(--Light-red-op);
-  color: var(--Light-red);
+.form-input input::placeholder {
   font-weight: 600;
+  color: var(--Dark-Blue);
 }
-div.memory {
-  padding: 10px 20px;
-  margin: 20px auto;
-  border-radius: 16px;
-  background-color: var(--Orangey-yellow-op);
-    color: var(--Orangey-yellow);
-  font-weight: 600;
-}
-
-.reaction label {
-  color: var(--Light-red);
-  font-weight: 600;
-  }
-.memory label {
-  color: var(--Orangey-yellow);
-  font-weight: 600;
-  line-height: 1;
-  }
-
-div.verbal {
-  padding: 10px 20px;
-  margin: 20px auto;
-  border-radius: 16px;
-  background-color: var(--Green-teal-op);
-  color: var(--Green-teal);
-  font-weight: 600;
-}
-div.visual {
-  padding: 10px 20px;
-  margin: 20px auto;
-  border-radius: 16px;
-  background-color: var(--Cobalt-blue-op);
-
-
-}
-  .visual label {
-  color: var(--Cobalt-blue);
-  font-weight: 600;
-  }
-.verbal label {
-  color: var(--Green-teal);
-  font-weight: 600;
-  }
-
-.field input::placeholder {
-  font-weight: 600;
-  color: var(--Light-slate-blue);
-}
-
-.field input[type="text"]:focus,
-.field input[type="email"]:focus,
-.field input[type="password"]:focus {
+.form-input input[type="text"]:focus,
+.form-input input[type="email"]:focus,
+.form-input input[type="password"]:focus {
   border: 1px solid var(--Dark-Blue);
   outline: none;
 }
-
+.form-input input[type="text"]:invalid,
+.form-input input[type="email"]:invalid,
+.form-input input[type="password"]:invalid {
+  border: 1px solid var(--Red);
+  color: var(--Red);
+  background: url(./images/icon-error.svg) no-repeat 95%;
+}
+.form-input input[type="text"]:focus:hover,
+.form-input input[type="email"]:focus:hover,
+.form-input input[type="password"]:focus:hover {
+  border: 1px solid var(--Dark-Blue);
+  outline: none;
+}
+.form-input input[type="text"]:hover,
+.form-input input[type="email"]:hover,
+.form-input input[type="password"]:hover {
+  border: 1px solid var(--Blue);
+  outline: none;
+}
 form input[type="submit"] {
   width: 100%;
   color: #ffffff;
   font-weight: 600;
-  background-color: var(--Dark-gray-blue);
+  background-color: var(--Green);
   padding: 16px 20px;
   margin-top: 20px;
-  border-radius: 56px;
+  border-radius: 6px;
   box-sizing: border-box;
   text-transform: uppercase;
   border: 0px solid var(--Green-Shadow);
   cursor: pointer;
+  box-shadow: 0px 6px 0px var(--Green-Shadow);
   transition: background-color 333ms ease;
 }
 form input[type="submit"]:hover {
-  background-color: var(--Light-royal-blue);
+  background-color: var(--Green-Hover);
 }
-
-.field.success input {
+.form-input.success input {
   border-color: var(--Blue);
 }
-
-.field.error input {
+.form-input.error input {
   border: 1px solid var(--Red);
+  color: var(--Red);
   background: url(./images/icon-error.svg) no-repeat 95%;
 }
-
-.field .invalid {
+.form-input.error input::placeholder {
+  color: var(--Red);
+}
+.form-input .invalid {
   color: var(--Red);
   text-align: right;
   font-style: italic;
@@ -173,95 +242,38 @@ form input[type="submit"]:hover {
   line-height: 1;
   margin-top: 10px;
 }
+*/
 
-/*signup formatting of left and right*/
 
-main#container {
-  width: 100%;
-  max-width: 1140px;
-  margin: 0px auto;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-.result {
-  display: flex;
-  flex-direction: row;
-  padding: 15px 0px 25px 0px;
-}
-.result.left {
-  width: 50%;
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.result.right {
-  width: 50%;
-  padding: 0px 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+/* Responsive layout - when the screen is less than 696px wide, make the two columns stack on top of each other instead of next to each other */
 
-div.try {
-  background-color: var(--Blue);
-  width: 100%;
-  padding: 16px 40px;
-  margin-bottom: 24px;
-  border-radius: 6px;
-  text-align: center;
-  box-shadow: 0px 10px 0px hsl(0, 0%, 0%, 0.33);
-}
-div.inputs-wrap {
-  border-radius: 6px;
-  background-color: #ffffff;
-  padding: 20px 40px;
-  border: none;
-  box-shadow: 0px 10px 0px hsl(0, 0%, 0%, 0.33);
-}
-
-/* Responsive layout - when the screen is less than 767px wide, make the two columns stack on top of each other instead of next to each other */
-
-@media only screen and (max-width: 767px) {
+@media only screen and (375px < width <= 696px) {
   /* For horizontal mobile phones: */
-  [class*="result-"] {
+  .box {
     width: 100%;
-    max-width: 100%;
-    padding: 24px;
-  }
-  .result {
     flex-direction: column;
+    border-radius: 0px;
   }
-  .result.left {
-    text-align: center;
-    margin: 50px 0px 25px 0px;
+  .left-toUp {
+    width: 100%;
+    border-radius: 0px 0px 50px 50px;
   }
-  .result.right {
-    margin: 25px 0px 50px 0px;
-  }
-  div.inputs-wrap {
-    padding: 24px;
+  .right-toDn {
+    width: 100%;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (width <= 375px) {
   /* For mobile phones: */
-  [class*="result"] {
+  .box {
     width: 100%;
-    max-width: 100%;
-    padding: 24px;
-  }
-  .result {
     flex-direction: column;
+    border-radius: 0px;
   }
-  .result.left {
-    text-align: center;
-    margin: 50px 0px 25px 0px;
+  .left-toUp {
+    width: 100%;
+    border-radius: 0px 0px 25px 25px;
   }
-  .result.right {
-    margin: 25px 0px 50px 0px;
-  }
-  div.inputs-wrap {
-    padding: 24px;
+  .right-toDn {
+    width: 100%;
   }
 }
