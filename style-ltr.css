@@ -149,16 +149,16 @@ button {
   width: 100%;
   padding: 20px;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   align-content: center;
-      background: linear-gradient(to bottom, var(--Dark-gray-blue), var(--Dark-gray-blue));
+      background-image: linear-gradient(to bottom, var(--Dark-gray-blue), var(--Dark-gray-blue));
 
   color: var(--White);
-  transition: background 333ms ease;
+  transition: background-image 333ms ease;
 
 }
 button:hover {
-    background: linear-gradient(to bottom, var(--grad-Light-Slate-blue), var(--grad-Light-Royal-blue));
+  background-image: linear-gradient(to bottom, var(--grad-Light-Slate-blue), var(--grad-Light-Royal-blue));
 
 }
 
