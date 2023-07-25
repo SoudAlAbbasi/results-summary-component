@@ -14,6 +14,7 @@
   --Light-lavender: hsl(241, 100%, 89%);
   --Dark-gray-blue: hsl(224, 30%, 27%);
   --Outof100: hsla(224, 30%, 27%, 0.67);
+  --White-Outof100: hsla(0, 0%, 100%, 0.5);
 
   --grad-Light-Slate-blue: hsl(252, 100%, 67%);
   --grad-Light-Royal-blue: hsl(241, 81%, 54%);
@@ -26,11 +27,11 @@
   font-weight: 500;
   box-sizing: border-box;
   line-height: 1;
+  direction: ltr;
 }
 body {
   background-color: var(--White);
   width: 100%;
-  direction: ltr;
   padding: 0px;
   margin: 0px;
 }
@@ -43,12 +44,13 @@ h1 {
 }
 
 
-main.container {
+main#container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 900px;
   margin: 0px auto;
+  min-height: 100vh;
+  display: flex;
   align-items: center;
-  justify-content: center;
 }
 .Outof100 {
   color: var(--Outof100);
@@ -57,21 +59,21 @@ main.container {
   display: flex;
   flex-direction: row;
   border-radius: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: none;
-  max-height: 90vh;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px;
+  border-radius: 50px;
 }
 .left-toUp {
   width: 50%;
-  margin: 0px;
   padding: 25px 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   background-image: linear-gradient(to bottom, var(--grad-Light-Royal-blue), var(--grad-Light-Slate-blue));
   color: var(--Light-lavender);
   border-radius: 50px;
+  text-align: center;
+  margin: 0px;
 }
 .right-toDn {
   width: 50%;
@@ -83,19 +85,28 @@ main.container {
   background-color: var(--White);
   color: var(--Dark-gray-blue);
   max-height: fit-content;
+  border-radius: 0 50px 50px 0;
 }
 
 .score {
   background-image: linear-gradient(to bottom, var(--grad-Persian-blue), var(--grad-Violet-blue));
-  color: var(--Pale-blue);
-  width: 150px;
-  height: 150px;
+  color: var(--White-Outof100);
   border-radius: 100%;
+  width: 200px;
+  height: 200px;
   border: none;
-  margin: 15px auto;
-  padding: 15px;
+  margin: 0px auto;
+  padding: 10px;
+  display: flex ;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
-div.score p  {
+span#score-number {
+  font-size: 3.5em;
+  color: var(--White);
+  text-align: center;
+  padding: 10px;
 }
 .reaction {
 background-color: var(--Reaction-red-bg);
@@ -149,16 +160,16 @@ button {
   width: 100%;
   padding: 20px;
   border: none;
-  border-radius: 50px;
+  border-radius: 20px;
   align-content: center;
-      background-image: linear-gradient(to bottom, var(--Dark-gray-blue), var(--Dark-gray-blue));
+      background: linear-gradient(to bottom, var(--Dark-gray-blue), var(--Dark-gray-blue));
 
   color: var(--White);
-  transition: background-image 333ms ease;
+  transition: background 333ms ease;
 
 }
 button:hover {
-  background-image: linear-gradient(to bottom, var(--grad-Light-Slate-blue), var(--grad-Light-Royal-blue));
+    background: linear-gradient(to bottom, var(--grad-Light-Slate-blue), var(--grad-Light-Royal-blue));
 
 }
 
@@ -247,10 +258,11 @@ form input[type="submit"]:hover {
 
 /* Responsive layout - when the screen is less than 696px wide, make the two columns stack on top of each other instead of next to each other */
 
-@media only screen and (375px < width <= 696px) {
+@media only screen and (376px <= width <= 696px) {
   /* For horizontal mobile phones: */
   .box {
     width: 100%;
+    margin: 0px;
     flex-direction: column;
     border-radius: 0px;
   }
@@ -260,20 +272,24 @@ form input[type="submit"]:hover {
   }
   .right-toDn {
     width: 100%;
+    border-radius: 0;
   }
 }
 @media only screen and (width <= 375px) {
   /* For mobile phones: */
   .box {
     width: 100%;
-    flex-direction: column;
+        margin: 0px;
+
+    flex-direction: column-reverse;
     border-radius: 0px;
   }
   .left-toUp {
     width: 100%;
-    border-radius: 0px 0px 25px 25px;
+    border-radius: 50px 50px 0 0;
   }
   .right-toDn {
     width: 100%;
+    border-radius: 0;
   }
 }
