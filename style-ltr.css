@@ -35,14 +35,23 @@ body {
   padding: 0px;
   margin: 0px;
 }
-h1 {
-  font-weight: 700;
-  font-size: 3em;
+h2 {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 0;
   margin-bottom: 20px;
-  line-height: 1.125;
-  color: var(--Pale-blue);
+  line-height: 1;
+  color: var(--Light-lavender);
 }
 
+h3.sum {
+  font-weight: 700;
+margin: 0;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  line-height: 1;
+  color: var(--Dark-gray-blue);
+}
 
 main#container {
   width: 100%;
@@ -59,13 +68,13 @@ main#container {
   display: flex;
   flex-direction: row;
   border-radius: 50px;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 2px 40px -15px var(--Light-lavender);
   margin: 20px;
   border-radius: 50px;
 }
 .left-toUp {
   width: 50%;
-  padding: 25px 25px;
+  padding: 25px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,7 +87,7 @@ main#container {
 .right-toDn {
   width: 50%;
   margin: 0px;
-  padding: 25px 25px;
+  padding: 25px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,42 +120,49 @@ span#score-number {
 .reaction {
 background-color: var(--Reaction-red-bg);
 padding: 15px 25px;
-margin: 15px 25px;
+  margin: 15px 0;
 color: var(--Reaction-red);
 border-radius: 20px;
 display: flex;
 flex-direction: row;
-justify-content: center;
+justify-content: space-between;
+align-items: center;
+
 }
 .memory {
   background-color: var(--Memory-yellow-bg);
   padding: 15px 25px;
-  margin: 15px 25px;
+  margin: 15px 0;
   color: var(--Memory-yellow);
   border-radius: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: stretch;
+justify-content: space-between;
+align-items: center;
 }
 .verbal {
   background-color: var(--Verbal-green-bg);
   padding: 15px 25px;
-  margin: 15px 25px;
+  margin: 15px 0;
   color: var(--Verbal-green);
   border-radius: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+justify-content: space-between;
+align-items: center;
+
 }
 .visual {
   background-color: var(--Visual-blue-bg);
   padding: 15px 25px;
-  margin: 15px 25px;
+  margin: 15px 0;
   color: var(--Visual-blue);
   border-radius: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+justify-content: space-between;
+align-items: center;
+
 }
 
 input[type="number"] {
@@ -155,12 +171,18 @@ input[type="number"] {
   color: var(--Dark-gray-blue);
   font-weight: 700;
 }
+input[type="text"] {
+  border: none;
+  background: none;
+  color: var(--Dark-gray-blue);
+  font-weight: 700;
+}
 
 button {
   width: 100%;
-  padding: 20px;
+  padding: 16px;
   border: none;
-  border-radius: 20px;
+  border-radius: 32px;
   align-content: center;
       background: linear-gradient(to bottom, var(--Dark-gray-blue), var(--Dark-gray-blue));
 
